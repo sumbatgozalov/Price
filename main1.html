@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main1.css" />
+    <title>Monthly</title>
+  </head>
+  <body>
+    <header>
+      <div class="h1"></div>
+      <h1>Our Pricing</h1>
+      <p>
+        <span class="option">Annually</span>
+        <span onclick="myfunc()" class="container">
+          <input type="checkbox" id="check" />
+          <label id="changeButton" for="check" class="button"></label>
+        </span>
+        <span class="option">Monthly</span>
+      </p>
+    </header>
+    <main>
+      <section class="section">
+        <div class="left">
+          <h3 class="h3s">Basic</h3>
+          <div class="priceside">
+            <span class="dollar">$</span>
+            <span class="spanPrice1">19.99</span>
+          </div>
+          <p class="sidecontent">500 GB Storage</p>
+          <p class="sidecontent">2 Users Allowed</p>
+          <p class="sidecontent">Send up to 3 GB</p>
+          <p class="sidecontent"></p>
+          <p class="learnside">Learn More</p>
+        </div>
+
+        <div class="center">
+          <h3 class="h3c">Professional</h3>
+          <div class="pricecenter">
+            <span class="dollar">$</span>
+            <span class="spanPrice2">24.99</span>
+          </div>
+          <p class="centercontent">1 TB Storage</p>
+          <p class="centercontent">5 Users Allowed</p>
+          <p class="centercontent">Send up to 10 GB</p>
+          <p class="centercontent"></p>
+          <p class="learnmain">Learn More</p>
+        </div>
+        <div class="right">
+          <h3 class="h3s">Master</h3>
+          <div class="priceside">
+            <span class="dollar">$</span>
+            <span class="spanPrice3">39.99</span>
+          </div>
+          <p class="sidecontent">2 TB Storage</p>
+          <p class="sidecontent">10 Users Allowed</p>
+          <p class="sidecontent">Send up to 20 GB</p>
+          <p class="sidecontent"></p>
+          <p class="learnside">Learn More</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const changeButton = document.getElementById("changeButton");
+      const spanPrice1 = document.querySelector(".spanPrice1");
+      const spanPrice2 = document.querySelector(".spanPrice2");
+      const spanPrice3 = document.querySelector(".spanPrice3");
+      changeButton.addEventListener("click", function () {
+        if (
+          spanPrice1.innerHTML === "19.99" &&
+          spanPrice2.innerHTML === "24.99" &&
+          spanPrice3.innerHTML === "39.99"
+        ) {
+          spanPrice1.innerHTML = "199.99";
+          spanPrice2.innerHTML = "249.99";
+          spanPrice3.innerHTML = "399.99";
+        } else {
+          spanPrice1.innerHTML = "19.99";
+          spanPrice2.innerHTML = "24.99";
+          spanPrice3.innerHTML = "39.99";
+        }
+      });
+    </script>
+  </body>
+</html>

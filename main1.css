@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:15px ;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+    background: url(./images/bg-top.svg) no-repeat  top  right , url(./images/bg-bottom.svg) no-repeat left bottom;
+    position: relative;
+    z-index: -1;
+    background-color: hsl(240, 78%, 98%);
+    background-size: 25% 80%,25% 45%
+   
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    margin: 3% auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    margin: 2% auto;
+    color: hsl(233, 13%, 49%);
+}
+
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    background:hsl(237, 63%, 64%);
+    width: 35px;
+    height: 20px;
+    border-radius: 35px;
+    cursor: pointer;
+    position: relative;
+    transition: .4s;
+}
+.button:hover{
+    background: hsl(236, 72%, 79%);
+}
+.button::before{
+    position: absolute;
+    content: "";
+    background: white;
+    right: 0px;
+    width: 15px;
+    height: 15px;
+    border-radius: 35px;
+    margin: 2px;
+    transition: .4s;
+}
+input:checked + .button{
+    background:hsl(237, 63%, 64%);
+}
+input:checked + .button:hover{
+    background: hsl(236, 72%, 79%);
+}
+input:checked + .button::before{
+    transform: translateX(-15px);
+    }
+input {
+    display: none;
+}    
+
+.dollar{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    margin-right:2%;
+}
+.spanPrice1,.spanPrice2,.spanPrice3  {
+   font-size:50px ;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+  
+}
+.spanPrice1,.spanPrice3{
+    color: hsl(232, 13%, 33%)
+}
+.spanPrice2, .center{
+    color:hsl(240, 78%, 98%);
+
+}
+.option{
+    color: hsl(233, 13%, 49%);
+    font-size: 15px;
+
+}
+.section{
+    display: flex;
+    width: 60vw;
+    margin: 4% auto;
+    justify-content: center;
+    z-index: 1;
+    gap: 5px;
+}
+
+
+.left,.center,.right{
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+}
+.left,.right{
+    margin:15px 0;
+    background:hsl(0, 0%, 100%);
+}
+.center{
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+.h3c{margin-top: 40px;
+    margin-bottom: 25px;}
+.h3s{
+    margin: 25px auto;
+    color: hsl(233, 13%, 49%)
+}
+.learnmain,.learnside{
+    text-transform: uppercase;
+}
+.learnmain{
+    background: hsl(240, 78%, 98%);
+    color: hsl(233, 13%, 49%);
+    font-size: 0.8rem;
+    padding: 10px 50px;
+    margin: 0  20px 40px 20px;
+    border-radius: 4px;
+    border: 1px solid  hsl(233, 13%, 49%);
+}
+.learnmain:hover{
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color:  hsl(240, 78%, 98%);
+    border: 1px solid hsl(240, 78%, 98%);
+    cursor: pointer;
+    transition:.4s;
+}
+.learnside{
+    border: 1px solid hsl(233, 13%, 49%);
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: hsl(240, 78%, 98%);   
+    font-size: 0.8rem;
+    padding: 10px 50px;
+    margin: 0  20px 10px 20px;
+    border-radius: 4px;
+}
+
+.learnside:hover{
+    border:  1px solid hsl(233, 13%, 49%);;
+    background: hsl(240, 78%, 98%);
+    color:hsl(233, 13%, 49%);
+    cursor: pointer;
+    transition:.4s;
+}
+.centercontent{
+    color:hsl(240, 78%, 98%);
+    border-top: 1px solid hsl(234, 14%, 74%);
+    font-size: 12px;
+    padding: 15px 0;
+    margin: 0 20px;
+}
+.sidecontent{
+    color: hsl(233, 13%, 49%);
+    font-weight: 700;
+    border-top: 1px solid hsl(234, 14%, 74%);
+    font-size: 12px;
+    padding: 15px 0;
+    margin: 0 20px;
+}
+
+.priceside{
+    color: hsl(232, 13%, 33%)
+}
+.priceside,.pricecenter{
+    display: flex;
+     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+@media all and (max-width:630px)
+{  
+    .h1{
+        margin: 50px auto;
+        gap: 20px;
+    }
+    p{margin-top: 40px;}
+    .section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .left,.center,.right{
+        width: 80%;
+    }
+    body{
+        background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+        background: url(./images/bg-top.svg) no-repeat top  right, url(./images/bg-bottom.svg) no-repeat bottom left;
+        background-size:  35% auto;
+    }
+}
